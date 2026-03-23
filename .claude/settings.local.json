@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /e/projects/i-built-this/node_modules/@clerk/nextjs -name *.d.ts)",
+      "Bash(xargs grep:*)",
+      "Bash(find /e/projects/i-built-this/node_modules/@clerk/nextjs/dist/types -name *.d.ts)",
+      "Bash(xargs ls:*)"
+    ]
+  }
+}

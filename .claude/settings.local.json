@@ -4,7 +4,8 @@
       "Bash(find /e/projects/i-built-this/node_modules/@clerk/nextjs -name *.d.ts)",
       "Bash(xargs grep:*)",
       "Bash(find /e/projects/i-built-this/node_modules/@clerk/nextjs/dist/types -name *.d.ts)",
-      "Bash(xargs ls:*)"
+      "Bash(xargs ls:*)",
+      "Bash(node -e \"const pkg = require\\(''./node_modules/drizzle-orm/package.json''\\); console.log\\(pkg.version\\)\")"
     ]
   }
 }

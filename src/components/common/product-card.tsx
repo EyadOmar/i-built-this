@@ -24,7 +24,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
                 <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors">
                   {product.name}
                 </CardTitle>
-                {product.voteCount > 100 && (
+                {product.voteCount > 300 && (
                   <Badge className="gap-1 bg-primary text-primary-foreground">
                     <StarIcon className="size-3 fill-current" />
                     Featured
@@ -48,7 +48,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
                 <ChevronUpIcon className="size-5" />
               </Button>
               <span className="text-sm font-semibold transition-colors text-foreground">
-                10
+                {product.voteCount}
               </span>
               <Button
                 variant="ghost"

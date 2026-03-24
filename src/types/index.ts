@@ -1,10 +1,4 @@
-type ProductType = {
-  id: number;
-  name: string;
-  description: string;
-  tags?: string[];
-  slug: string;
-  voteCount: number;
-};
+import { products } from '@/db/schema';
+import { InferSelectModel } from 'drizzle-orm';
 
-export type { ProductType };
+export type ProductType = InferSelectModel<typeof products>;

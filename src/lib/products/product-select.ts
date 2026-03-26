@@ -1,8 +1,10 @@
 import { db } from '@/db';
 import { products } from '@/db/schema';
 import { and, desc, eq, gt } from 'drizzle-orm';
+import { connection } from 'next/server';
 
 export async function getFeaturedProducts() {
+  'use cache';
   const productsData = await db
     .select()
     .from(products)
@@ -14,6 +16,7 @@ export async function getFeaturedProducts() {
 }
 
 export async function getRecentlyLaunchedProducts() {
+  await connection();
   const productsData = await db
     .select()
     .from(products)

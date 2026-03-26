@@ -57,9 +57,11 @@ export default function Header() {
 
         <MobileMenu
           userButton={
-            <Show when={'signed-in'}>
-              <CustomUserButton />
-            </Show>
+            <Suspense fallback={null}>
+              <Show when={'signed-in'}>
+                <CustomUserButton />
+              </Show>
+            </Suspense>
           }
           navLinks={
             <>

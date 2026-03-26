@@ -1,3 +1,4 @@
+'use cache';
 import ProductsWrapper from '@/components/common/products-wrapper';
 import SectionTitle from '@/components/common/section-title';
 import { Button } from '@/components/ui/button';
